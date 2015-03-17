@@ -1,5 +1,10 @@
-from py_bing_search import PyBingSearch
-b = PyBingSearch("CHANGE ME")
-result_list, next_uri = b.search("Python Software Foundation", limit=50, format='json')
+from Bing import Bing
 
-print(results_list[0].description)
+def main():
+	b = Bing("oliver@spryn.me", "KhzGeDtnd8ZbZ0XG8UnooEqhCbPGQD4nIUPBC0R4r0Q=")
+	r = b.search("Chuck Testa")
+
+	for row in r:
+		print row.Title
+
+if __name__ == "__main__": main()
